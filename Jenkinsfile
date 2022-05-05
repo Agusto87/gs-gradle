@@ -10,7 +10,7 @@ node {
      }
   }
   stage('Ejecucion') {
-     myGradleContainer.inside("-v ${env.HOME}/.gradle:/home/gradle/.gradle") {
+     myGradleContainer.inside("-v /home/aurelio/jenkins/jenkins_home/gradle:/home/gradle/.gradle") {
        sh 'cd complete && gradle run'
      }
   }
